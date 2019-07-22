@@ -1,18 +1,18 @@
 import {
   ADD_SMURF_START,
   ADD_SMURF_SUCCESS,
-  ADD_SMURF_FAIIL
+  ADD_SMURF_FAIL
 } from '../actions/index';
 
 import {
   GET_SMURF_START,
   GET_SMURF_SUCCESS,
-  GET_SMURF_FAIIL
+  GET_SMURF_FAIL
 } from '../actions/index';
 
 import { ERROR } from '../actions/index';
 
-const initalState = {
+const initialState = {
   smurfs: [],
   fetchingSmurfs: false,
   addingSmurf: false,

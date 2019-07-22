@@ -1,4 +1,4 @@
-import axios from axios;
+import axios from "axios";
 
 export const ADD_SMURF_START = "ADD_SMURF_START";
 export const ADD_SMURF_SUCCESS= "ADD_SMURF_SUCCESS";
@@ -24,7 +24,7 @@ export const getSmurfs = () => (dispatch) => {
     .catch(error => {
       console.log(error);
       dispatch({
-        type: GET_SMURF_FAILURE,
+        type: GET_SMURF_FAIL,
         payload: error
       })
       return false
@@ -45,7 +45,7 @@ export const addSmurf = newSmurf => dispatch => {
     .catch(error => {
       console.log(error);
       dispatch({
-        type: ADD_SMURF_FAILURE,
+        type: ADD_SMURF_FAIL,
         payload: error});
       return false
     })
