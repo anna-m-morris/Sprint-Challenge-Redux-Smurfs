@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addSmurf } from '../actions/index';
+import { addSmurf } from '../actions';
 
-class SmurfForm extends React.Component {
+class SmurfForm extends Component {
   constructor() {
     super();
     this.state = {
-      name: '',
-      age: '',
-      height: ''
+      name: ' ',
+      age: ' ',
+      height: ' '
     };
   }
 
@@ -28,26 +28,32 @@ class SmurfForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
+      <form className="add-smurf-form" onSubmit={this.submitHandler}>
         <input
+          className="input"
           value={this.state.name}
           name="name"
-          palceholder="Name"
+          type="text"
+          placeholder="Name"
           onChange={this.changeHandler}
         />
         <input
+          className="input"
           value={this.state.age}
           name="age"
-          palceholder="Age"
+          type="text"
+          placeholder="Age"
           onChange={this.changeHandler}
         />
         <input
+          className="input"
           value={this.state.height}
           name="height"
-          palceholder="Height"
+          type="text"
+          placeholder="height in cm"
           onChange={this.changeHandler}
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Add New Smurf</button>
       </form>
     );
   }
