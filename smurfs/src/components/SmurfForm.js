@@ -50,10 +50,10 @@ class SmurfForm extends Component {
           value={this.state.height}
           name="height"
           type="text"
-          placeholder="height in cm"
+          placeholder="Height"
           onChange={this.changeHandler}
         />
-        <button type="submit">Add New Smurf</button>
+        <button type="submit">New Smurf</button>
       </form>
     );
   }

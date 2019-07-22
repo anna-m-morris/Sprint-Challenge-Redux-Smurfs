@@ -47,6 +47,5 @@ export const addSmurf = newSmurf => dispatch => {
         type: ADD_SMURF_FAIL,
         payload: error
       });
-      return false;
     });
 };
