@@ -10,7 +10,7 @@ export const GET_SMURF_FAIL = "GET_SMURF_FAIL";
 
 export const ERROR = "ERROR";
 
-export const getSmurf = () => (dispatch) => {
+export const getSmurfs = () => (dispatch) => {
   dispatch({ type: GET_SMURF_START })
 
   axios
